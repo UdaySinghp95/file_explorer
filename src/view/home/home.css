@@ -1,0 +1,16 @@
+.hm12ctn {
+	display: flex;
+	flex: 1;
+	height: 100%;
+	box-shadow: 0 0 10px 5px rgb(231, 229, 229);
+	margin: auto;
+	background-color: white;
+	flex-direction: column;
+	overflow: hidden;
+	transition: 0.1s;
+}
+
+.hm12sc {
+	display: flex;
+	flex: 1;
+}

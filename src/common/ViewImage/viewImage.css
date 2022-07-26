@@ -1,0 +1,29 @@
+.vi27ctn {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	backdrop-filter: brightness(0.8);
+}
+
+.vi27sc {
+	margin: auto;
+	position: relative;
+}
+
+.vi27im {
+	border-radius: 8px;
+}
+
+@media screen and (max-width: 1100px) {
+	.vi27im {
+		width: 100vw;
+	}
+}
+.vi27sc .MuiSvgIcon-root {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: white;
+	font-size: 2rem !important;
+	transform: translateX(-50%) translateY(50%);
+}

@@ -1,0 +1,50 @@
+.af21ctn {
+	display: flex;
+	inset: 0;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: brightness(0.5);
+}
+
+.af21sc {
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 9px;
+	background-color: white;
+	gap: 1rem;
+	padding-bottom: 3rem;
+	position: relative;
+}
+
+.af21hd {
+	margin-top: 3rem;
+	font-family: "roboto";
+	font-weight: bold;
+	text-transform: capitalize;
+	letter-spacing: 0.5px;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+.af21ac {
+	margin: 1rem;
+	border-radius: 0.6rem;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid #e6e6e6;
+	box-sizing: border-box;
+}
+
+.af21sc .MuiSvgIcon-root {
+	position: absolute;
+	right: 1.5rem;
+	top: 1.1rem;
+	font-size: 2rem !important;
+}
+
+.af21sc .MuiSvgIcon-root:hover {
+	font-size: 2.2rem !important;
+}

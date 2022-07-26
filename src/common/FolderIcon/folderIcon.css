@@ -1,0 +1,60 @@
+.fi19ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: min-content;
+	padding: 0.2rem 0.5rem;
+	border-radius: 0.5rem;
+	transition: 0.2s;
+	position: relative;
+}
+
+.fi19ctn:hover {
+	background-color: #31b3e614;
+}
+.fi19ctn:active {
+	background-color: #45b4e035;
+}
+
+.fi19ctn .MuiSvgIcon-root {
+	color: #44bdf4;
+	font-size: 5rem !important;
+}
+
+.fi19pr {
+	margin: 0;
+	font-family: "roboto";
+	padding: 0;
+	text-align: center;
+	font-weight: 500;
+	display: block;
+	width: min-content;
+	max-lines: 2;
+	max-height: 2.2em;
+	overflow: hidden;
+}
+.fi19lf {
+	position: absolute;
+	left: 80%;
+	top: 80%;
+	z-index: 999;
+	font-family: "roboto";
+	border-radius: 2px;
+	background-color: white;
+	box-shadow: 0 0 2px 0.5px rgb(231, 229, 229);
+	cursor: default;
+}
+
+.fi19lf p {
+	padding: 0.7rem 1.4rem;
+	margin: 0;
+	transition: 0.1s;
+}
+
+.fi19lf p:hover {
+	background-color: rgba(240, 240, 240, 0.554);
+}
+
+.danger {
+	color: rgb(228, 68, 24);
+}

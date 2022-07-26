@@ -1,0 +1,42 @@
+.if25ctn {
+	position: absolute;
+	inset: 0;
+	backdrop-filter: brightness(0.8);
+	display: flex;
+}
+
+.if25sc {
+	background-color: white;
+	margin: auto;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem 2rem 2rem;
+}
+
+.if25sub {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(10rem, 15rem));
+	justify-content: center;
+	justify-items: center;
+	text-transform: capitalize;
+	overflow: hidden;
+	padding-bottom: 1rem;
+}
+
+.if25hd {
+	text-align: center;
+	font-family: "roboto";
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+}
+
+.if25bd {
+	font-weight: bold;
+}
+
+.MuiButton-root {
+	font-size: 1.2rem !important;
+	padding-inline: 2rem !important;
+}

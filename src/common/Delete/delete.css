@@ -1,0 +1,25 @@
+.dl28ctn {
+	position: absolute;
+	inset: 0;
+	backdrop-filter: brightness(0.9);
+	display: flex;
+}
+
+.dl28sc {
+	margin: auto;
+	background-color: white;
+	padding: 1rem 3rem;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.dl28cb {
+	display: flex;
+	gap: 3rem;
+}
+
+.dl28hd {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-family: "roboto";
+}

@@ -1,0 +1,21 @@
+.MuiSvgIcon-root {
+	color: #a19d9d;
+	font-size: 1.6rem !important;
+}
+
+.ic15ctn {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: rgb(109, 108, 108);
+	font-family: "Roboto", sans-serif;
+	transition: 0.1s;
+	border-radius: 30px;
+	padding: 0 1rem;
+	cursor: default;
+	animation-delay: 1.3s;
+}
+
+.ic15ctn:hover {
+	background-color: rgba(250, 250, 250, 0.711);
+}

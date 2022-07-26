@@ -1,0 +1,24 @@
+.ab20ctn {
+	border: dotted 3px rgb(221, 221, 221);
+	display: flex;
+	height: 4.4rem;
+	width: 4.4rem;
+	border-radius: 5px;
+	place-self: center;
+	transition: 0.5s;
+	transform: translateX(0.75rem);
+	cursor: pointer;
+	margin-top: 1rem;
+	margin-right: 1rem;
+}
+
+.ab20ctn .MuiSvgIcon-root {
+	color: rgb(221, 221, 221);
+	margin: auto;
+	transition: 0.2s;
+	font-size: 1.5rem !important;
+}
+
+.ab20ctn:hover .MuiSvgIcon-root {
+	font-size: 2.5rem !important;
+}

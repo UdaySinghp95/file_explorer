@@ -1,0 +1,58 @@
+.sh16ctn {
+	border-radius: 50rem;
+	width: clamp(3rem, 100%, 15rem);
+	padding: 0.5rem;
+	border: 1.5px solid #e6e6e6;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	padding-left: 0.5rem;
+	position: relative;
+}
+
+@media screen and (max-width: 750px) {
+	.sh16ctn {
+		margin: 0;
+	}
+}
+
+.sh16ip {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	width: 100%;
+	font-family: "roboto", sans-serif;
+	font-size: 1rem;
+	color: rgb(118, 116, 116);
+	padding-left: 1rem;
+}
+
+.sh16sub {
+	position: absolute;
+	width: 100%;
+	top: 105%;
+	right: 0;
+	text-align: center;
+	background-color: white !important;
+	z-index: 999;
+	font-family: "roboto";
+	font-size: 1.1rem;
+	transition: 0.1s;
+	height: auto;
+}
+
+.sh16sub.active {
+	box-shadow: 0 2px 3px 0.3px rgb(231, 229, 229);
+}
+
+.sh16pr {
+	padding: 0.7rem;
+	padding-inline: 2rem;
+	margin: 0;
+
+	transition: 0.1s;
+}
+
+.sh16pr:hover {
+	background-color: rgba(248, 248, 248, 0.654);
+}

@@ -1,0 +1,38 @@
+.im26ctn {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.im26sc {
+	gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.im26im {
+	margin-inline: auto;
+	border-radius: 5px;
+}
+
+.im26st {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	width: 100%;
+	height: 5rem;
+	inset: 0;
+}
+
+.im26hd {
+	margin: 0;
+	font-family: "roboto";
+}
+
+.im26er {
+	width: 100%;
+	height: 100%;
+	margin-inline: auto;
+}

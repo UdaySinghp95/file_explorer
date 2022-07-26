@@ -1,0 +1,16 @@
+.hd14ctn {
+	display: flex;
+	border-bottom: 1.5px solid #e6e6e6;
+	box-sizing: border-box;
+	align-items: center;
+	gap: 1.5rem;
+	padding: 0.3rem 3rem;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+	.hd14ctn {
+		padding: 0.3rem 0.3rem;
+		justify-content: center;
+	}
+}

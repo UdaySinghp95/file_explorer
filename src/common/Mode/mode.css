@@ -1,0 +1,18 @@
+.md22ctn {
+	padding: 0.2rem;
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	padding: 0.5rem 2rem;
+	font-weight: 300;
+	transition: 0.2s;
+	cursor: default;
+}
+
+.md22ctn.active {
+	background-color: rgb(54, 158, 232);
+	color: white;
+}
+
+.md22ctn:not(.active):hover {
+	background-color: rgba(54, 158, 232, 0.083);
+}

@@ -1,0 +1,14 @@
+.sd13ctn {
+	display: flex;
+	flex: 0.45;
+	border-right: 1.5px solid #e6e6e6;
+	overflow-x: scroll;
+	padding-top: 1rem;
+	animation-delay: 1.5s;
+}
+
+@media screen and (max-width: 750px) {
+	.sd13ctn {
+		flex: 0;
+	}
+}

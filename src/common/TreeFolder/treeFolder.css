@@ -1,0 +1,22 @@
+.tf17ctn {
+	display: flex;
+	flex-direction: column;
+	transform: translateX(2rem);
+}
+
+.tf17sc {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	max-width: 10rem;
+	transition: 0.2s;
+	padding: 0.6rem 1rem;
+	border-radius: 1rem;
+	cursor: pointer;
+	font-family: "roboto";
+	letter-spacing: 0.25px;
+}
+
+.tf17sc:hover {
+	background-color: #f9f9f9;
+}

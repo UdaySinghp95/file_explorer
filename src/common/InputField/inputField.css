@@ -1,0 +1,16 @@
+.if23ip {
+	width: 65%;
+	margin-inline: auto;
+	border: 1.5px solid #e6e6e6;
+	font-size: 1.2rem;
+	border-radius: 8px;
+	padding: 0.7rem 1rem;
+	margin-top: 0.7rem;
+	color: rgb(98, 98, 98);
+	font-weight: lighter;
+}
+
+.if23ip::placeholder {
+	text-transform: capitalize;
+	color: gainsboro;
+}
