@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 
 import store from "./store";
 
-import Home from "./view/Home/Home";
+import Home from "./view/Home/index";
 
 import "./App.css";
 
