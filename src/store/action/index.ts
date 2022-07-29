@@ -115,8 +115,20 @@ export function toggleDeleteVisible(deleteVisible: string): Action {
 	};
 }
 
-// export function toggleLoading(loading:boolean):Action{
-// 	return {
-// 		type:actionEnum.l
-// 	}
-// }
+export function toggleLoading(loading: boolean): Action {
+	return {
+		type: actionEnum.Toggle_Loading,
+		payload: {
+			loading,
+		},
+	};
+}
+
+export function toggleError(error: boolean): Action {
+	return {
+		type: actionEnum.Toggle_Error,
+		payload: {
+			error,
+		},
+	};
+}

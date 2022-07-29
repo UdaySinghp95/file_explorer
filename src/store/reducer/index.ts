@@ -106,6 +106,16 @@ function reducer(state: State = initialState, action: Action): State {
 
 			break;
 
+		case actionEnum.Toggle_Loading:
+			newState.loading = action.payload.loading || false;
+
+			break;
+
+		case actionEnum.Toggle_Error:
+			newState.error = action.payload.error || false;
+
+			break;
+
 		default:
 			break;
 	}

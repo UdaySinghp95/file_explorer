@@ -14,6 +14,7 @@ enum actionEnum {
 	Image_Visible = "IMAGE_VISIBLE",
 	Back_Folder = "BACK_FOLDER",
 	Delete_Visible = "DELETE_VISIBLE",
+	Toggle_Error = "TOGGLE_ERROR",
 }
 
 export default actionEnum;

@@ -5,7 +5,7 @@
 }
 
 .im26sc {
-	gap: 1rem;
+	gap: 2.1rem 1rem;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -14,8 +14,8 @@
 .im26ld {
 	margin-inline: auto;
 	border-radius: 5px;
-	width: 18rem;
-	height: 12rem;
+	width: 20rem;
+	height: 14rem;
 }
 
 .im26st {

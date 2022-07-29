@@ -1,9 +1,10 @@
 .sd13ctn {
 	display: flex;
-	flex: 0.45;
+	flex: 0.4;
 	border-right: 1.5px solid #e6e6e6;
 	overflow-x: scroll;
-	padding-top: 1rem;
+	padding-top: 2rem;
+	padding-left: 2rem;
 	animation-delay: 1.5s;
 }
 

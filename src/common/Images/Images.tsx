@@ -5,7 +5,7 @@ import ContentLoader from "react-content-loader";
 import axios from "axios";
 
 import State from "../../store/types/State";
-import { setImageVisile } from "../../store/action";
+import { setImageVisile, toggleError, toggleLoading } from "../../store/action";
 
 import getName from "../../utils/getName";
 
@@ -16,21 +16,28 @@ import "./images.css";
 function Images({ children }: PropsType) {
 	const [list, setList] = useState<string[]>([]);
 	const [page, setPage] = useState(0);
-	const [loading, setLoading] = useState(0);
+
 	const observer = useRef<IntersectionObserver>();
-	const curr = useSelector(({ path }: State) => path[path.length - 1]);
+
+	const { curr, loading, error } = useSelector(
+		({ path, loading, error }: State) => ({
+			curr: path[path.length - 1],
+			loading,
+			error,
+		})
+	);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		setList([]);
-		setLoading(0);
+		dispatch(toggleLoading(false));
+		dispatch(toggleError(false));
 		setPage(0);
-	}, [curr]);
+	}, [curr, dispatch]);
 
 	const fetchImages = useCallback(async () => {
 		try {
-			setLoading(1);
-
-			console.log("fetching", curr);
+			dispatch(toggleLoading(true));
 
 			const {
 				data: { results },
@@ -53,17 +60,19 @@ function Images({ children }: PropsType) {
 
 			setList(newList);
 
-			setLoading(0);
+			dispatch(toggleLoading(false));
 
-			if (results.length === 0) setLoading(2);
+			if (results.length === 0) dispatch(toggleError(true));
 		} catch (e) {
-			setLoading(2);
+			console.log("setting error");
+			dispatch(toggleError(true));
 			console.log(e);
 		}
-	}, [curr, list, page]);
+	}, [curr, list, page, dispatch]);
 
 	const lastElementRef = useCallback(
 		(node: HTMLImageElement) => {
+			console.log(loading);
 			if (loading) return;
 
 			if (observer.current) observer.current.disconnect();
@@ -72,12 +81,11 @@ function Images({ children }: PropsType) {
 				if (entries[0].intersectionRatio) fetchImages();
 			});
 
-			if (node && loading === 0) observer.current.observe(node);
+			if (node && loading === false && error === false)
+				observer.current.observe(node);
 		},
-		[loading, fetchImages]
+		[loading, fetchImages, error]
 	);
-
-	const dispatch = useDispatch();
 
 	const handleClick = (img: string) =>
 		dispatch(setImageVisile(img.replace("w=400", "w=1080")));
@@ -91,13 +99,13 @@ function Images({ children }: PropsType) {
 					<img
 						src={url}
 						key={index}
-						className="im26im animate__animated  animate__fadeInUp"
+						className="im26im "
 						onClick={() => handleClick(url)}
 						alt="related to folder name"
 					/>
 				))}
 
-				{loading !== 2 && (
+				{error === false && (
 					<>
 						<div ref={lastElementRef} />
 						{[...Array(20)].map((d, index) => (
@@ -115,7 +123,7 @@ function Images({ children }: PropsType) {
 			</div>
 
 			<div className="im26st">
-				{loading === 2 && (
+				{error && (
 					<img
 						src={process.env.PUBLIC_URL + "/error.gif"}
 						alt="error state"
