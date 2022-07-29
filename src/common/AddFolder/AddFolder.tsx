@@ -20,6 +20,7 @@ function AddFolder() {
 			mode,
 		})
 	);
+
 	const [name, setName] = useState("");
 	const [creator, setCreator] = useState("");
 	const [size, setSize] = useState("");

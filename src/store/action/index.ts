@@ -1,5 +1,6 @@
 import Info from "../../types/Info";
 import Action from "../types/Action";
+import State from "../types/State";
 
 import actionEnum from "./actionEnum";
 
@@ -129,6 +130,15 @@ export function toggleError(error: boolean): Action {
 		type: actionEnum.Toggle_Error,
 		payload: {
 			error,
+		},
+	};
+}
+
+export function setCacheData(store: State): Action {
+	return {
+		type: actionEnum.Get_Cache,
+		payload: {
+			store,
 		},
 	};
 }

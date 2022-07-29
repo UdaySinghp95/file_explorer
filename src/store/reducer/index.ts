@@ -10,7 +10,7 @@ import State from "../types/State";
 import initialState from "./rawData";
 
 function reducer(state: State = initialState, action: Action): State {
-	const newState = { ...state };
+	let newState = { ...state };
 
 	let name: string, parent: string;
 
@@ -113,6 +113,11 @@ function reducer(state: State = initialState, action: Action): State {
 
 		case actionEnum.Toggle_Error:
 			newState.error = action.payload.error || false;
+
+			break;
+
+		case actionEnum.Get_Cache:
+			newState = action.payload.store || initialState;
 
 			break;
 

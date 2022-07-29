@@ -1,6 +1,7 @@
 import Info from "../../types/Info";
 
 import actionEnum from "../action/actionEnum";
+import State from "./State";
 
 type Action = {
 	type: actionEnum;
@@ -21,6 +22,7 @@ type Action = {
 		deleteVisible?: string;
 		loading?: boolean;
 		error?: boolean;
+		store?: State;
 	};
 };
 

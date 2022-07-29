@@ -15,6 +15,7 @@ enum actionEnum {
 	Back_Folder = "BACK_FOLDER",
 	Delete_Visible = "DELETE_VISIBLE",
 	Toggle_Error = "TOGGLE_ERROR",
+	Get_Cache = "GET_CACHE",
 }
 
 export default actionEnum;
