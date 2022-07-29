@@ -1,5 +1,6 @@
 import Info from "../../types/Info";
 import Action from "../types/Action";
+
 import actionEnum from "./actionEnum";
 
 export function upatePath(addPath: string): Action {
@@ -113,3 +114,9 @@ export function toggleDeleteVisible(deleteVisible: string): Action {
 		},
 	};
 }
+
+// export function toggleLoading(loading:boolean):Action{
+// 	return {
+// 		type:actionEnum.l
+// 	}
+// }

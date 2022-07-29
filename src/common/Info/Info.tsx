@@ -1,8 +1,12 @@
-import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
+
+import { Button } from "@mui/material";
+
 import { setFolderInfoVisible } from "../../store/action";
 import State from "../../store/types/State";
+
 import getName from "../../utils/getName";
+
 import "./info.css";
 
 function Info() {

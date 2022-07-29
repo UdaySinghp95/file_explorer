@@ -1,5 +1,6 @@
-import HashMap from "../types/HashMap";
 import TreeFolder from "../common/TreeFolder";
+
+import HashMap from "../types/HashMap";
 
 function createTree(
 	hash: HashMap,

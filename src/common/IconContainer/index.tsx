@@ -1,11 +1,5 @@
 import "./iconContainer.css";
 
-type PropsType = {
-	title: string;
-	onClick: Function;
-	children: JSX.Element;
-};
-
 function index({ children, title, onClick }: PropsType) {
 	return (
 		<div
@@ -17,5 +11,11 @@ function index({ children, title, onClick }: PropsType) {
 		</div>
 	);
 }
+
+type PropsType = {
+	title: string;
+	onClick: Function;
+	children: JSX.Element;
+};
 
 export default index;

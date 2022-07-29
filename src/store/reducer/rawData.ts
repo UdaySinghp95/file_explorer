@@ -70,6 +70,8 @@ const initialState: State = {
 	sortFolder: false,
 	imageVisible: "",
 	deleteVisible: "",
+	loading: false,
+	error: false,
 };
 
 export default initialState;

@@ -1,4 +1,5 @@
 import Info from "../../types/Info";
+
 import actionEnum from "../action/actionEnum";
 
 type Action = {
@@ -18,6 +19,8 @@ type Action = {
 		sortFolder?: boolean;
 		imageVisible?: string;
 		deleteVisible?: string;
+		loading?: boolean;
+		error?: boolean;
 	};
 };
 

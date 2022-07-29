@@ -1,7 +1,10 @@
-import "./sidebar.css";
-import createTree from "../../utils/createTree";
 import { useSelector } from "react-redux";
+
 import State from "../../store/types/State";
+
+import createTree from "../../utils/createTree";
+
+import "./sidebar.css";
 
 function Sidebar() {
 	const { hash, path } = useSelector(({ hash, path }: State) => ({

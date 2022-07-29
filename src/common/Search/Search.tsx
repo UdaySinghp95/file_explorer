@@ -1,11 +1,15 @@
 import { useState } from "react";
-import "./search.css";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useDispatch, useSelector } from "react-redux";
+
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+
 import State from "../../store/types/State";
-import searchFolder from "../../utils/searchFolder";
 import { setPath } from "../../store/action";
+
+import searchFolder from "../../utils/searchFolder";
 import getName from "../../utils/getName";
+
+import "./search.css";
 
 function Search() {
 	const [value, setValue] = useState("");

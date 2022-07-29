@@ -1,9 +1,12 @@
 import deleteNode from "../../utils/deleteNode";
 import generateID from "../../utils/generateID";
 import getName from "../../utils/getName";
+
 import actionEnum from "../action/actionEnum";
+
 import Action from "../types/Action";
 import State from "../types/State";
+
 import initialState from "./rawData";
 
 function reducer(state: State = initialState, action: Action): State {

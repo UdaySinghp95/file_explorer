@@ -14,6 +14,8 @@ type State = {
 	sortFolder: boolean;
 	imageVisible: string;
 	deleteVisible: string;
+	error: boolean;
+	loading: boolean;
 };
 
 export default State;

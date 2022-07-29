@@ -1,12 +1,16 @@
-import Mode from "../Mode";
-import InputField from "../InputField";
-import "./addFolder.css";
-import Button from "../Button";
-import CloseIcon from "@mui/icons-material/Close";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import CloseIcon from "@mui/icons-material/Close";
+
 import { addFolder, toggleAddFolderVisible } from "../../store/action";
 import State from "../../store/types/State";
-import { useState } from "react";
+
+import Mode from "../Mode";
+import InputField from "../InputField";
+import Button from "../Button";
+
+import "./addFolder.css";
 
 function AddFolder() {
 	let { curr, addFolderVisible, mode } = useSelector(

@@ -1,7 +1,10 @@
-import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteFolder, toggleDeleteVisible } from "../../store/action";
+
+import { Button } from "@mui/material";
+
 import State from "../../store/types/State";
+import { deleteFolder, toggleDeleteVisible } from "../../store/action";
+
 import "./delete.css";
 
 function Delete() {

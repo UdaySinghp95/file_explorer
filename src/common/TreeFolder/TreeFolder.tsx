@@ -1,15 +1,13 @@
 import React from "react";
-import FolderIcon from "@mui/icons-material/Folder";
-import "./treeFolder.css";
 import { useDispatch } from "react-redux";
+
+import FolderIcon from "@mui/icons-material/Folder";
+
 import { setPath } from "../../store/action";
+
 import getName from "../../utils/getName";
 
-type PropsType = {
-	title: string;
-	dir: string[];
-	children?: React.ReactNode;
-};
+import "./treeFolder.css";
 
 function Treefolder({ title, children, dir }: PropsType) {
 	const dispatch = useDispatch();
@@ -26,5 +24,11 @@ function Treefolder({ title, children, dir }: PropsType) {
 		</div>
 	);
 }
+
+type PropsType = {
+	title: string;
+	dir: string[];
+	children?: React.ReactNode;
+};
 
 export default Treefolder;

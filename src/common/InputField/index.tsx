@@ -1,12 +1,5 @@
 import "./inputField.css";
 
-type Prop = {
-	title: string;
-	value?: string;
-	type?: string;
-	handleChange?: Function;
-};
-
 function index({ title, value, handleChange, type }: Prop) {
 	return (
 		<input
@@ -18,5 +11,12 @@ function index({ title, value, handleChange, type }: Prop) {
 		/>
 	);
 }
+
+type Prop = {
+	title: string;
+	value?: string;
+	type?: string;
+	handleChange?: Function;
+};
 
 export default index;

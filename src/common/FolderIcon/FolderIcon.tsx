@@ -1,7 +1,8 @@
 import { MouseEvent } from "react";
-import Folder from "@mui/icons-material/Folder";
-import "./folderIcon.css";
 import { useDispatch, useSelector } from "react-redux";
+
+import Folder from "@mui/icons-material/Folder";
+
 import {
 	hideLeftClick,
 	setFolderInfoVisible,
@@ -9,11 +10,10 @@ import {
 	upatePath,
 } from "../../store/action";
 import State from "../../store/types/State";
+
 import getName from "../../utils/getName";
 
-type PropType = {
-	title: string;
-};
+import "./folderIcon.css";
 
 function FolderIcon({ title }: PropType) {
 	const leftClickVisible = useSelector(
@@ -47,7 +47,7 @@ function FolderIcon({ title }: PropType) {
 		>
 			<Folder />
 			<p className="fi19pr  ">{getName(title)}</p>
-			{leftClickVisible == title && (
+			{leftClickVisible === title && (
 				<div className="fi19lf">
 					<p onClick={handleFolderClick}> Open</p>
 					<p onClick={handleInfoClick}>Info</p>
@@ -59,6 +59,10 @@ function FolderIcon({ title }: PropType) {
 		</div>
 	);
 }
+
+type PropType = {
+	title: string;
+};
 
 export default FolderIcon;
 

@@ -1,5 +1,5 @@
-import React from "react";
 import AddIcon from "@mui/icons-material/Add";
+
 import "./addButton.css";
 
 function index({ onClick }: Props) {

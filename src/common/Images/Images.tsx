@@ -1,16 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import axios from "axios";
-import "./images.css";
-import { useDispatch, useSelector } from "react-redux";
-import { setImageVisile } from "../../store/action";
-import Photo from "../../types/Photos";
-import State from "../../store/types/State";
-import getName from "../../utils/getName";
-import ContentLoader from "react-content-loader";
 
-type PropsType = {
-	children?: React.ReactNode;
-};
+import { useDispatch, useSelector } from "react-redux";
+import ContentLoader from "react-content-loader";
+import axios from "axios";
+
+import State from "../../store/types/State";
+import { setImageVisile } from "../../store/action";
+
+import getName from "../../utils/getName";
+
+import Photo from "../../types/Photos";
+
+import "./images.css";
 
 function Images({ children }: PropsType) {
 	const [list, setList] = useState<string[]>([]);
@@ -19,9 +20,13 @@ function Images({ children }: PropsType) {
 	const observer = useRef<IntersectionObserver>();
 	const curr = useSelector(({ path }: State) => path[path.length - 1]);
 
-	useEffect(() => setList([]), [curr]);
+	useEffect(() => {
+		setList([]);
+		setLoading(0);
+		setPage(0);
+	}, [curr]);
 
-	const fetchImages = async () => {
+	const fetchImages = useCallback(async () => {
 		try {
 			setLoading(1);
 
@@ -39,7 +44,7 @@ function Images({ children }: PropsType) {
 
 			console.log(curr, list[0]?.includes(getName(curr)));
 
-			if (list.length != 0 && list[0].includes(getName(curr)))
+			if (list.length !== 0 && list[0].includes(getName(curr)))
 				newList = [...list];
 
 			results.map((img: Photo) => newList.push(img.urls.small as string));
@@ -55,7 +60,7 @@ function Images({ children }: PropsType) {
 			setLoading(2);
 			console.log(e);
 		}
-	};
+	}, [curr, list, page]);
 
 	const lastElementRef = useCallback(
 		(node: HTMLImageElement) => {
@@ -69,7 +74,7 @@ function Images({ children }: PropsType) {
 
 			if (node && loading === 0) observer.current.observe(node);
 		},
-		[loading, curr]
+		[loading, fetchImages]
 	);
 
 	const dispatch = useDispatch();
@@ -121,5 +126,9 @@ function Images({ children }: PropsType) {
 		</div>
 	);
 }
+
+type PropsType = {
+	children?: React.ReactNode;
+};
 
 export default Images;

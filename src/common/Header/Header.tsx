@@ -1,17 +1,21 @@
-import "./header.css";
+import { useDispatch } from "react-redux";
+
 import CreateNewFolderOutlinedIcon from "@mui/icons-material/CreateNewFolderOutlined";
-import IconContainer from "../IconContainer";
 import PublishOutlinedIcon from "@mui/icons-material/PublishOutlined";
 import SortOutlinedIcon from "@mui/icons-material/SortOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import Search from "../Search";
-import { useDispatch } from "react-redux";
+
 import {
 	backFolder,
 	setSortFolder,
 	toggleAddFolderVisible,
 	toggleMode,
 } from "../../store/action";
+
+import Search from "../Search";
+import IconContainer from "../IconContainer";
+
+import "./header.css";
 
 function Header() {
 	const dispatch = useDispatch();

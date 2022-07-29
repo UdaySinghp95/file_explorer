@@ -1,7 +1,8 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { toggleMode } from "../../store/action";
 import State from "../../store/types/State";
+
 import "./mode.css";
 
 function Mode({ title }: Prop) {
