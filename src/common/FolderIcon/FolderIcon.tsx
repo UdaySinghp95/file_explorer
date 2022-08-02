@@ -11,7 +11,7 @@ import {
 } from "../../store/action";
 import State from "../../store/types/State";
 
-import getName from "../../utils/getName";
+import { getName } from "../../utils/helper";
 
 import "./folderIcon.css";
 

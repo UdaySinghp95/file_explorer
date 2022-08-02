@@ -1,6 +1,5 @@
 import deleteNode from "../../utils/deleteNode";
-import generateID from "../../utils/generateID";
-import getName from "../../utils/getName";
+import { getName, generateID } from "../../utils/helper";
 
 import actionEnum from "../action/actionEnum";
 

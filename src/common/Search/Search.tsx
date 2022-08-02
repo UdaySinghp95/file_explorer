@@ -7,7 +7,7 @@ import State from "../../store/types/State";
 import { setPath } from "../../store/action";
 
 import searchFolder from "../../utils/searchFolder";
-import getName from "../../utils/getName";
+import { getName } from "../../utils/helper";
 
 import "./search.css";
 

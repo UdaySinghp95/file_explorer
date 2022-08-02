@@ -33,7 +33,7 @@ function AddFolder() {
 	const handleClose = () => dispatch(toggleAddFolderVisible(false));
 
 	const handleCreate = () => {
-		if (name.length === 0) return;
+		if (!(name && date && size && creator)) return;
 
 		dispatch(addFolder(curr, name, { creator, size, date, type: mode }));
 

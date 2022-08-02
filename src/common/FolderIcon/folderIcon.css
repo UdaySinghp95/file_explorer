@@ -33,6 +33,7 @@
 	max-lines: 2;
 	max-height: 2.2em;
 	overflow: hidden;
+	max-width: 4rem;
 }
 .fi19lf {
 	position: absolute;

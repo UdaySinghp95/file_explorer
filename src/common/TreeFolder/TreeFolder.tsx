@@ -5,7 +5,7 @@ import FolderIcon from "@mui/icons-material/Folder";
 
 import { setPath } from "../../store/action";
 
-import getName from "../../utils/getName";
+import { getName } from "../../utils/helper";
 
 import "./treeFolder.css";
 

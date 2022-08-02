@@ -1,7 +1,11 @@
 import { createStore } from "redux";
 
-import reducer from "./reducer";
+import rootReducer from "./reducer";
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
-export default store;
+store.subscribe(() => {
+	localStorage.setItem("file-explorer", JSON.stringify(store.getState()));
+});
+
+export { store };

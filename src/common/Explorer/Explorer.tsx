@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setPath, toggleAddFolderVisible } from "../../store/action";
 import State from "../../store/types/State";
 
-import getName from "../../utils/getName";
+import { getName } from "../../utils/helper";
 
 import FolderIcon from "../FolderIcon";
 import AddButton from "../AddButton";

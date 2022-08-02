@@ -7,7 +7,7 @@ import axios from "axios";
 import State from "../../store/types/State";
 import { setImageVisile, toggleError, toggleLoading } from "../../store/action";
 
-import getName from "../../utils/getName";
+import { getName } from "../../utils/helper";
 
 import Photo from "../../types/Photos";
 

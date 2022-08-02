@@ -8,14 +8,21 @@ import Info from "../../common/Info";
 import ViewImage from "../../common/ViewImage";
 import Delete from "../../common/Delete";
 
-import { hideLeftClick } from "../../store/action";
+import { hideLeftClick, setCacheData } from "../../store/action";
 
 import "./home.css";
+import { useEffect } from "react";
 
 function Home() {
 	const dispatch = useDispatch();
 
 	const handleLeftClick = () => dispatch(hideLeftClick(""));
+
+	useEffect(() => {
+		const cacheStore = localStorage.getItem("file-explorer");
+
+		if (cacheStore) dispatch(setCacheData(JSON.parse(cacheStore)));
+	}, [dispatch]);
 
 	return (
 		<div
